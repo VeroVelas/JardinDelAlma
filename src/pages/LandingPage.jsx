@@ -3,7 +3,7 @@
 function LandingPage() {
     return ( 
       <>
-        Hola mundo
+        Hola mundo 123
       </>
      );
   }
