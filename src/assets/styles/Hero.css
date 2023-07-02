@@ -1,0 +1,18 @@
+.textoHero{
+    color:rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+}
+.tituloHero{
+    color:rgba(0, 0, 0, 0.76);
+    text-align: center;
+    font-size: 4.1rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.heroSection{
+    background-image: url(../img/heroImagen.png);
+    background-size: cover;
+    min-height: 100vh;
+}
