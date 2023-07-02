@@ -1,5 +1,6 @@
 import Hero from "../assets/components/moleculas/Hero";
 import Navbar from "../assets/components/moleculas/Navbar";
+import Section1 from "../assets/components/moleculas/Section1";
 
 
 function LandingPage() {
@@ -7,7 +8,7 @@ function LandingPage() {
       <>
         <Navbar/>
         <Hero/>
-        Hola mundo 123
+        <Section1/>
       </>
      );
   }
