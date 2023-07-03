@@ -5,7 +5,6 @@ import Hero from "../components/moleculas/Hero";
 import Navbar from "../components/moleculas/Navbar";
 import Paquetes from "../components/moleculas/Paquetes";
 import Section1 from "../components/moleculas/Section1";
-import Ubicacion from "../components/moleculas/Ubicacion";
 
 
 function LandingPage() {
@@ -17,6 +16,7 @@ function LandingPage() {
         <Collage/>
         <Cards/>
         <Paquetes/> 
+        <Section2/>
         <Ubicacion/>
         <Footer/>
       </>

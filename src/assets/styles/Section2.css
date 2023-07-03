@@ -1,0 +1,22 @@
+.body{
+    padding: 0 7%;
+}
+.containerTitulo{
+    justify-content: center;
+    width: 100%;
+    margin: 0% 0;
+}
+.containerPadre2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10%;
+}
+.containerImg2{
+    display: flex;
+    justify-content: left;
+}
+.containerText{
+    width: 50%;
+}
