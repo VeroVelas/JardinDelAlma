@@ -1,0 +1,20 @@
+.cardFondo{
+    border-radius: 10px;
+    background: rgba(241, 188, 140, 0.60);
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.30);  
+    height: 100%; 
+}
+.contenedorTexto{
+    width: 50%;
+}
+.services{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.tituloCards{
+    text-align: center;
+    font-size: 4.1rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-bottom: 15%;
+}
