@@ -1,9 +1,9 @@
-import Cards from "../assets/components/moleculas/Cards";
-import Footer from "../assets/components/moleculas/Footer";
-import Hero from "../assets/components/moleculas/Hero";
-import Navbar from "../assets/components/moleculas/Navbar";
-import Paquetes from "../assets/components/moleculas/Paquetes";
-import Section1 from "../assets/components/moleculas/Section1";
+import Cards from "../components/moleculas/Cards";
+import Footer from "../components/moleculas/Footer";
+import Hero from "../components/moleculas/Hero";
+import Navbar from "../components/moleculas/Navbar";
+import Paquetes from "../components/moleculas/Paquetes";
+import Section1 from "../components/moleculas/Section1";
 
 
 function LandingPage() {

@@ -1,10 +1,10 @@
-import "../../styles/Cards.css"
-import anillosCard from  "../../img/anillos.svg"
-import pinataCard from  "../../img/pinata.svg"
-import fiestaCard from  "../../img/fiesta.svg"
-import personasCard from  "../../img/personas.svg"
-import casaCard from  "../../img/casa.svg"
-import tratoCard from  "../../img/trato.svg"
+import  "../../assets/styles/Cards.css"
+import anillosCard from "../../assets/img/anillos.svg"
+import pinataCard from  "../../assets/img/pinata.svg"
+import fiestaCard from  "../../assets/img/fiesta.svg"
+import personasCard from  "../../assets/img/personas.svg"
+import casaCard from  "../../assets/img/casa.svg"
+import tratoCard from  "../../assets/img/trato.svg"
 function Cards() {
     return ( 
         <>

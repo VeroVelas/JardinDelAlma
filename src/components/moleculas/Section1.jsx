@@ -1,6 +1,6 @@
-import imagenSectio1 from "../../img/imagenSection1.png"
-import imagenSectio11 from "../../img/imagenSection11.png"
-import "../../styles/Section1.css"
+import imagenSectio1 from "../../assets/img/imagenSection1.png"
+import imagenSectio11 from "../../assets/img/imagenSection11.png"
+import "../../assets/styles/Section1.css"
 
 function Section1() {
     return ( 

@@ -1,5 +1,5 @@
-import imagenLogo from "../../img/logo.svg"
-import "../../styles/NavBar.css"
+import imagenLogo from "../../assets/img/logo.svg"
+import "../../assets/styles/Navbar.css"
 function Navbar() {
     return (  
         <>

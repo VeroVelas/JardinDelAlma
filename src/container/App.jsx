@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
-import Navbar from "../assets/components/moleculas/Navbar";
-import Hero from "../assets/components/moleculas/Hero";
+import Collage from "../components/moleculas/Collage";
+import Navbar from "../components/moleculas/Navbar";
+import Section1 from "../components/moleculas/Section1";
+import Cards from "../components/moleculas/Cards";
+import Hero from "../components/moleculas/Hero"
 
 function App() {
   return (
@@ -9,6 +12,9 @@ function App() {
           <Routes>
             <Route path="/hero" element={<Hero/>}/>
             <Route path="/navbar" element={<Navbar/>}/>
+            <Route path="/collage" element={<Collage/>}/>
+            <Route path="/seccion1" element={<Section1/>}/>
+            <Route path="/cards" element={<Cards/>}/>
             <Route path="/landingPage" element={<LandingPage/>}/>
           </Routes>
       </BrowserRouter>
