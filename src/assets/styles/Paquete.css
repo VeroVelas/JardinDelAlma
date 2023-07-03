@@ -1,11 +1,62 @@
 .box{
     background: #F6F6F6;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
-
+    height: 110%;
 }
 .imagenLogo{
     padding-left: 5%;
 }
 .textPaquete{
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    text-align: center;
     font-size: 0.75rem;
+}
+.btn-buy{
+    color: #689D6D;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 25px;
+    border-radius: none;
+    border-color: #689D6D;
+    background: #F6F6F6;
+    width: 35%;
+    height: 10%;
+    margin-top: 10%;
+}
+.pricing{
+    margin-bottom: 15%;
+}
+.tituloPaquete{
+    color: #689D6D;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.tituloPaqueteTop{
+    color: #F1BC8C;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.btn-buyTop{
+    color: #F1BC8C;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 25px;
+    border-radius: none;
+    border-color: #F1BC8C;
+    background: #F6F6F6;
+    width: 35%;
+    height: 10%;
+    margin-top: 10%;
+}
+.price{
+    color: rgba(0, 0, 0, 0.76);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
