@@ -1,4 +1,5 @@
 import Cards from "../components/moleculas/Cards";
+import Collage from "../components/moleculas/Collage";
 import Footer from "../components/moleculas/Footer";
 import Hero from "../components/moleculas/Hero";
 import Navbar from "../components/moleculas/Navbar";
@@ -12,6 +13,7 @@ function LandingPage() {
         <Navbar/>
         <Hero/>
         <Section1/>
+        <Collage/>
         <Cards/>
         <Paquetes/> 
         <Footer/>
