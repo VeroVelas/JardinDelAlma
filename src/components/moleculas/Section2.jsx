@@ -6,7 +6,8 @@ import "../../assets/styles/Section2.css";
 
 function Section2() {
     return (
-        <div className="body">
+    <>
+        {/*<div className="body">
             <div className="containerTitulo">
                 <Title2> Tips</Title2>
                 </div>
@@ -25,7 +26,8 @@ function Section2() {
                         </Paragraph>
                     </div>
                 </div>
-        </div>
+        </div>*/}
+    </>
     );
 }
 export default Section2

@@ -10,7 +10,7 @@ import "../../assets/styles/Collage.css"
 function Collage() {
   return (
     <>
-      <div className="collage">
+      {/*<div className="collage">
         <div className="imagen1">
           <img src={img1c} alt="Imagen 1" />
         </div>
@@ -35,7 +35,7 @@ function Collage() {
         <div className="imagen7">
           <img src={img7c} alt="Imagen 7" />
         </div>
-      </div>
+      </div>*/}
     </>
   );
 }
