@@ -4,7 +4,7 @@ import logoCard from "../../assets/img/logo.svg"
 function Paquetes() {
     return ( 
         <>
-        
+<h1 data-aos="fade-up" className="tituloCards">Paquetes</h1>
 <section id="pricing" className="pricing">
 <div className="container aos-init aos-animate" data-aos="fade-up">
   <div className="row gy-4 aos-init aos-animate" data-aos="fade-left">
