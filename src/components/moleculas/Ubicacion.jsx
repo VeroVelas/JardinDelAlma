@@ -1,6 +1,6 @@
 import "../../assets/styles/Ubicacion.css";
 import imagenUbicacion from "../../assets/img/imagenSection4.png";
-import informaciónUbicaciónImg from "../../assets/img/informaciónUbicación.png"
+import informaciónUbicaciónimg from "../../assets/img/informaciónUbicación.png"
 
 function Ubicacion() {
     return ( 
@@ -15,7 +15,7 @@ function Ubicacion() {
                     </center>
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-                    <img className="imagenInformaticaUbicacion img-fluid " src={informaciónUbicaciónImg} />
+                    <img className="imagenInformaticaUbicacion img-fluid " src={informaciónUbicaciónimg} />
                 </div>  
             </div>
         </div>

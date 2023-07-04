@@ -10,7 +10,18 @@ import "../../assets/styles/Collage.css"
 function Collage() {
   return (
     <>
-      {/*<div className="collage">
+    {/*<div className="row">
+      <div className="column">
+        <img src={img1c} alt="" />
+        <img src={img2c} alt="" />
+        <img src={img3c} alt="" />
+        <img src={img4c} alt="" />
+        <img src={img5c} alt="" />
+        <img src={img6c} alt="" />
+        <img src={img7c} alt="" />
+      </div>
+    </div>
+      <div className="collage">
         <div className="imagen1">
           <img src={img1c} alt="Imagen 1" />
         </div>
