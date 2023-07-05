@@ -9,12 +9,6 @@ body{
     box-sizing: border-box;
 }
 
-.title{
-    text-align: center;
-    font-size: 3rem;
-    padding: .8em 0 .4em;
-}
-
 .gallery{
     padding-bottom: 3em;
     padding-top: 1em;
@@ -31,7 +25,6 @@ body{
 
 .gallery__picture{
     position: relative;
-    cursor: pointer;
     overflow: hidden;
 }
 
