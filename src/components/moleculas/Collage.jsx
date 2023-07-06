@@ -5,6 +5,7 @@ import img4c from "../../assets/img/img4c.png"
 import img5c from "../../assets/img/img5c.png"
 import img6c from "../../assets/img/img6c.png"
 import img7c from "../../assets/img/img7c.png"
+import imagenSection1 from "../../assets/img/imagenSection1.png"
 import "../../assets/styles/Collage.css"
 
 function Collage() {
