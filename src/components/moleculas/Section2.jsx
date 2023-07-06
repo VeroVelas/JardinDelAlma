@@ -7,14 +7,14 @@ import "../../assets/styles/Section2.css";
 function Section2() {
     return (
     <>
-        <div className="body">
-            <div className="containerTitulo">
-                <Title2> Tips</Title2>
-                </div>
-                <div className="containerPadre2">
-                    <div className="containerImg2">
-                        <img src={ImgSection2} alt="Imagen dos" />
+     <h1 data-aos="fade-up" className="tituloCards">Tips</h1>
+     <section id="about" className="contenedorSection2 about">
+            <div className="container aos-init aos-animate" data-aos="fade-up">
+                <div className="row gx-0">
+                    <div className="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
+                        <img src={ImgSection2} className="img-fluid" alt=""/>
                     </div>
+                    <div className="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                     <div className="containerText">
                         <Paragraph>
                                  <ul>
@@ -25,8 +25,10 @@ function Section2() {
                                 </ul>
                         </Paragraph>
                     </div>
+                    </div>
                 </div>
-        </div>
+            </div>
+        </section>
     </>
     );
 }
