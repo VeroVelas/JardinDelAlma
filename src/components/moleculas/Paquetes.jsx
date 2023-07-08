@@ -15,8 +15,8 @@ function Paquetes() {
         <img src={logoCard} className="imagenLogo img-fluid" alt=""/>
         <ul className="textPaquete">
             <lo>Limite máximo de personas por evento 120.</lo><br/>
-            <lo>Limite mínimo de personas por evento 60.</lo><br/>
-            <lo>El precio aplica solo de <b>lunes</b> a <b>miercoles</b>.</lo><br/>
+            <lo>Limite mínimo de personas por evento 30.</lo><br/>
+            <lo>El precio aplica solo de <b>lunes</b> a <b>miércoles</b>.</lo><br/>
             <lo>Preguntar sobre los servicios.</lo><br/>
         </ul>
         <button className="btn-buy">Reservar</button>
@@ -30,8 +30,8 @@ function Paquetes() {
         <img src={logoCard} className="imagenLogo img-fluid" alt=""/>
         <ul className="textPaquete">
             <lo>Limite máximo de personas por evento 120.</lo><br/>
-            <lo>Limite mínimo de personas por evento 60.</lo><br/>
-            <lo>El precio aplica solo de <b>viernes</b> a <b>sabado</b>.</lo><br/>
+            <lo>Limite mínimo de personas por evento 30.</lo><br/>
+            <lo>El precio aplica solo de <b>viernes</b> y <b>sábado</b>.</lo><br/>
             <lo>Preguntar sobre los servicios.</lo><br/>
         </ul>
         <button className="btn-buyTop">Reservar</button>
@@ -45,8 +45,8 @@ function Paquetes() {
         <img src={logoCard} className="imagenLogo img-fluid" alt=""/>
         <ul className="textPaquete">
             <lo>Limite máximo de personas por evento 120.</lo><br/>
-            <lo>Limite mínimo de personas por evento 60.</lo><br/>
-            <lo>El precio aplica solo de <b>jueves</b> a <b>domingo</b>.</lo><br/>
+            <lo>Limite mínimo de personas por evento 30.</lo><br/>
+            <lo>El precio aplica solo de <b>jueves</b> y <b>domingo</b>.</lo><br/>
             <lo>Preguntar sobre los servicios.</lo><br/>
         </ul>
         <button className="btn-buy">Reservar</button>

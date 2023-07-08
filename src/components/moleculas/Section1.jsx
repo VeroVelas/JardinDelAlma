@@ -29,7 +29,7 @@ function Section1() {
                     </div>
                     <div className="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         <div className="contenedorTextoSection1 content">
-                            <h3 className="Titulo2Section2">¡¡¡Tús experiencias!!!</h3>
+                            <h3 className="Titulo2Section2">¡¡¡Tus experiencias!!!</h3>
                             <h2 className="texto2Section2">Espacios que se adaptan a tus necesidades: Encuentra el lugar perfecto para tu boda, cumpleaños, conferencia o cualquier ocasión especial.</h2>
                             <div className="text-center text-lg-start"></div>
                         </div>
