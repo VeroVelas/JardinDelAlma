@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import imagenLogo from "../../assets/img/logo.svg"
 import "../../assets/styles/Navbar.css"
 function Navbar() {
@@ -13,13 +14,13 @@ function Navbar() {
          
                 <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                        <Link className="nav-link active" aria-current="page" to="/" >Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#paquetes">Paquetes</a>
+                        <a className="nav-link active" aria-current="page" id="paquetes">Paquetes</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#contacto">Contacto</a>
+                        <Link className="nav-link active" aria-current="page" id="#contacto">Contacto</Link>
                     </li>
                 </ul>
                     {/* <button className="btn btn-outline-success" type="submit">Iniciar Sesión</button>*/}

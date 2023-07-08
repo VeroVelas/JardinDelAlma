@@ -7,11 +7,13 @@ import Cards from "../components/moleculas/Cards";
 import Hero from "../components/moleculas/Hero"
 import Imagen from "../components/moleculas/Imagen";
 import Section2 from "../components/moleculas/Section2";
+import Formulario from "../pages/Formulario";
 
 function App() {
   return (
       <BrowserRouter>
           <Routes>
+            <Route path="/formulario" element={<Formulario/>}/>
             <Route path="/hero" element={<Hero/>}/>
             <Route path="/navbar" element={<Navbar/>}/>
             <Route path="/collage" element={<Collage/>}/>
@@ -19,7 +21,7 @@ function App() {
             <Route path="/imagen" element={<Imagen/>}/>
             <Route path="/seccion2" element={<Section2/>}/>
             <Route path="/cards" element={<Cards/>}/>
-            <Route path="/landingPage" element={<LandingPage/>}/>
+            <Route path="/" element={<LandingPage/>}/>
           </Routes>
       </BrowserRouter>
   );
