@@ -8,11 +8,13 @@ import Hero from "../components/moleculas/Hero"
 import Imagen from "../components/moleculas/Imagen";
 import Section2 from "../components/moleculas/Section2";
 import Formulario from "../pages/Formulario";
+import InicioSesion from "../pages/InicioSesion";
 
 function App() {
   return (
       <BrowserRouter>
           <Routes>
+            <Route path="/iniciosesion" element={<InicioSesion/>}/>
             <Route path="/formulario" element={<Formulario/>}/>
             <Route path="/hero" element={<Hero/>}/>
             <Route path="/navbar" element={<Navbar/>}/>
