@@ -74,3 +74,17 @@
 .textoJustificado{
     text-align: justify;
 }
+.tipoOperación{
+    height: 62px;
+    width: 80%;
+    background: #D9D9D9;
+}
+.alert{
+    color: red;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
