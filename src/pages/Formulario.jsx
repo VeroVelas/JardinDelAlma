@@ -1,16 +1,11 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
 import "../assets/styles/Formulario.css";
-import ExportJsonExcel from "export-excel";
-import * as XLSX from "xlsx";
 
 function Formulario() {
     const form1 = useRef();
     const [state, setState]=useState([]);
     const [precio, setPrecio]=useState([]);
-    const Excelfile = ExportJsonExcel.Excelfile;
-    const Excelsheet = ExportJsonExcel.Excelsheet;
-    const Excelcolumm = ExportJsonExcel.Excelcolumm;
     const chandlerClick = (e) => {
         e.preventDefault();
         const newForm = new FormData (form1.current);
