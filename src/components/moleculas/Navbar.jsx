@@ -22,6 +22,9 @@ function Navbar() {
                     <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" id="#contacto">Contacto</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" aria-current="page" to='/iniciosesion'>Iniciar</Link>
+                    </li>
                 </ul>
                     {/* <button className="btn btn-outline-success" type="submit">Iniciar Sesión</button>*/}
                 </div>

@@ -1,134 +1,27 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
+import validarDatos from "./validarDatos";
+import definirPaquete from "./definirPaquete";
+import registrarDatos from "./registrarDatos";
 import "../assets/styles/Formulario.css";
 
 function Formulario() {
     const form1 = useRef();
+    const newForm = new FormData (form1.current);
     const [state, setState]=useState([]);
     const [precio, setPrecio]=useState([]);
     const chandlerClick = (e) => {
         e.preventDefault();
-        const newForm = new FormData (form1.current);
         const hoy= new Date();
         const fecha= newForm.get('fecha').split('-');
         const soloLetras=/^[a-zA-ZÀ-ÿ\s]{1,40}$/;
         const letrasNumeros=/^[A-Za-z0-9\s]+$/;
-        if (newForm.get('nombre')==''){
-            setState('El campo "Nombre Completo" no puede estar vacio');
-        }else if(newForm.get('nombre').search(soloLetras)){
-            setState('El campo "Nombre Completo" solo puede llevar letras')
-        }else if (newForm.get('telefono')==''){
-            setState('El campo "Número Telefónico" no puede estar vacio')
-        }else if (newForm.get('telefono').length<10||newForm.get('telefono').length>10){
-            setState('El "Número Telefónico" tiene que tener 10 numeros');
-        }else if (newForm.get('invitados')==''){
-            setState('El campo "Número De Invitados" no puede estar vacio')
-        }else if (newForm.get('fecha')==''){
-            setState('El campo "Fecha Del Evento" no puede estar vacio')
-        }else if (newForm.get('evento')==''){
-            setState('El campo "Tipo De Evento" no puede estar vacio')
-        }else if(newForm.get('evento').search(letrasNumeros)){
-            setState('El campo "Tipo De Evento" solo puede llevar letras y numeros')
-        }else switch(parseInt(newForm.get('tipo'))){
-            case 0:
-                if (newForm.get('invitados')<29||newForm.get('invitados')>121){
-                    setState('El numero de invitados tiene que estar en el rango de 30 a 120 personas')
-                    setPrecio('')
-                }else if (fecha[0]<=hoy.getFullYear()){
-                    if (fecha[1]<=hoy.getMonth()+1){
-                        if (fecha[2]<=hoy.getDate()){
-                            setState('La fecha del evento no es valida');
-                            setPrecio('')
-                        }else {
-                            setState('')
-                            calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                        }
-                    }else {
-                        setState('')
-                        calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                    }
-                }else {
-                    setState('')
-                    calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                }
-                break;
-            case 1:
-                if (newForm.get('invitados')<29||newForm.get('invitados')>121){
-                    setState('El numero de invitados tiene que estar en el rango de 30 a 120 personas')
-                    setPrecio('')
-                }else if (fecha[0]<=hoy.getFullYear()){
-                    if (fecha[1]<=hoy.getMonth()+1){
-                        if (fecha[2]<=hoy.getDate()){
-                            setState('La fecha del evento no es valida');
-                            setPrecio('')
-                        }else {
-                            setState('')
-                            calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                        }
-                    }else {
-                        setState('')
-                        calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                    }
-                }else {
-                    setState('')
-                    calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                }
-                break;
-            case 2:
-                if (newForm.get('invitados')<29||newForm.get('invitados')>121){
-                    setState('El numero de invitados tiene que estar en el rango de 30 a 120 personas')
-                    setPrecio('')
-                }else if (fecha[0]<=hoy.getFullYear()){
-                    if (fecha[1]<=hoy.getMonth()+1){
-                        if (fecha[2]<=hoy.getDate()){
-                            setState('La fecha del evento no es valida');
-                            setPrecio('')
-                        }else {
-                            setState('')
-                            calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                        }
-                    }else {
-                        setState('')
-                        calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                    }
-                }else {
-                    setState('')
-                    calcularPrecio(newForm.get('invitados'), newForm.get('tipo'))
-                }
-                break;
-            case 3:
-                if (newForm.get('invitados')<59||newForm.get('invitados')>121){
-                    setState('El numero de invitados tiene que estar en el rango de 60 a 120 personas')
-                    setPrecio('')
-                }else if (fecha[0]<=hoy.getFullYear()){
-                    if (fecha[1]<=hoy.getMonth()+1){
-                        if (fecha[2]<=hoy.getDate()){
-                            setState('La fecha del evento no es valida');
-                            setPrecio('')
-                        }else {
-                            setState('')
-                            setPrecio(newForm.get('invitados')*315)
-                        }
-                    }else {
-                        setState('')
-                        setPrecio(newForm.get('invitados')*315)
-                    }
-                }else {
-                    setState('')
-                    setPrecio(newForm.get('invitados')*315)
-                }
-                break;
+        const correcto= validarDatos(newForm, soloLetras, letrasNumeros, setState)
+        if (correcto){
+            definirPaquete(newForm, hoy, fecha, setState, setPrecio)
         }
+    }
 
-    }
-    const calcularPrecio=(nInvitados, nPaquete)=>{
-        const array=[4000,5500,4500]
-        do{
-            nInvitados++;
-        }while(nInvitados%10!=0)
-        nInvitados=nInvitados/10;
-        setPrecio((nInvitados*350)+array[nPaquete]);
-    }
     return ( 
         <>
         <Navbar/>
@@ -157,14 +50,14 @@ function Formulario() {
                                     </div>
                                     <div className="">
                                         <select className="tipoOperación" onChange={chandlerClick} name="tipo">
-                                            <option value="0">Paquete 1</option>
-                                            <option value="1">Paquete 2</option>
-                                            <option value="2">Paquete 3</option>
-                                            <option value="3">Paquete 4</option>
+                                            <option value="1">Paquete 1</option>
+                                            <option value="2">Paquete 2</option>
+                                            <option value="3">Paquete 3</option>
+                                            <option value="4">Paquete 4</option>
                                         </select>
                                     </div>
                                     <label className="alert">{state}</label><br/>
-                                    <button type="button" onClick={chandlerClick} className="btn">Reservar</button>
+                                    <button type="button" onClick={registrarDatos(newForm, state)} className="btn">Reservar</button>
                                 </center>
                             </form>
                         </div>
