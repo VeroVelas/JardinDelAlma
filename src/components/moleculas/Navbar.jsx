@@ -17,10 +17,10 @@ function Navbar() {
                         <Link className="nav-link active" aria-current="page" to="/" >Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" id="paquetes">Paquetes</a>
+                        <a className="nav-link active" aria-current="page" href="#paquetes">Paquetes</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" id="#contacto">Contacto</Link>
+                        <a className="nav-link active" aria-current="page" href="#contacto">Contacto</a>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to='/iniciosesion'>Iniciar</Link>

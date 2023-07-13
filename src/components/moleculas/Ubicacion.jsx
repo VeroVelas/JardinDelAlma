@@ -5,7 +5,7 @@ import informaciónUbicaciónimg from "../../assets/img/informaciónUbicación
 function Ubicacion() {
     return ( 
         <>
-        <div class="container ContenedorMarginButton">
+        <div id="contacto" class="container ContenedorMarginButton">
             <h1 data-aos="fade-up" className="tituloCards">Ubicación</h1>
             <div class="row">
                 <div class="col contenedorMap">

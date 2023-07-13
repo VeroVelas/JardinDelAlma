@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Paquetes() {
     return ( 
         <>
-<h1 data-aos="fade-up" className="tituloCards">Paquetes</h1>
+<h1 id="paquetes" data-aos="fade-up" className="tituloCards">Paquetes</h1>
 <section id="pricing" className="pricing">
 <div className="container aos-init aos-animate" data-aos="fade-up">
   <div className="row gy-4 aos-init aos-animate" data-aos="fade-left">
