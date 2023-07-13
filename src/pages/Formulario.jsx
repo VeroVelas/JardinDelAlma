@@ -2,7 +2,7 @@ import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
 import validarDatos from "./validarDatos";
 import definirPaquete from "./definirPaquete";
-import registrarDatos from "./registrarDatos";
+import Clientes from "../components/contenedor/Clientes";
 import "../assets/styles/Formulario.css";
 
 function Formulario() {
@@ -19,6 +19,20 @@ function Formulario() {
         const correcto= validarDatos(newForm, soloLetras, letrasNumeros, setState)
         if (correcto){
             definirPaquete(newForm, hoy, fecha, setState, setPrecio)
+        }
+    }
+    const registrarDatos=(newForm, state)=>{
+        const cliente={
+            nombre:newForm.get('nombre'),
+            telefono:newForm.get('telefono'),
+            invitados:newForm.get('invitados'),
+            fecha:newForm.get('fecha'),
+            evento:newForm.get('evento'),
+            paquete:`paquete ${newForm.get('tipo')}`
+        }
+        if (state==''){
+            Clientes[Clientes.length]=cliente;
+            alert(JSON.stringify(Clientes));
         }
     }
 
@@ -57,7 +71,7 @@ function Formulario() {
                                         </select>
                                     </div>
                                     <label className="alert">{state}</label><br/>
-                                    <button type="button" onClick={registrarDatos(newForm, state)} className="btn">Reservar</button>
+                                    <button type="button" onClick={registrarDatos} className="btn">Reservar</button>
                                 </center>
                             </form>
                         </div>
