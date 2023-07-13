@@ -11,6 +11,7 @@ function registrarDatos(newForm, state){
     }
     if (state==''){
         Clientes[Clientes.length]=cliente;
+        alert(JSON.stringify(Clientes));
     }
 }
 export default registrarDatos;
