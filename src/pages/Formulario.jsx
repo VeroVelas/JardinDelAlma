@@ -1,27 +1,27 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
-import validarDatos from "./validar/validarDatos";
-import definirPaquete from "./validar/definirPaquete";
+import validarDatos from "./validarDatos";
+import definirPaquete from "./definirPaquete";
 import Clientes from "../components/contenedor/Clientes";
 import "../assets/styles/Formulario.css";
 
 function Formulario() {
     const form1 = useRef();
-    const newForm = new FormData (form1.current);
     const [state, setState]=useState([]);
     const [precio, setPrecio]=useState([]);
-    const chandlerClick = (e) => {
-        e.preventDefault();
+    const chandlerClick = () => {
+        const newForm = new FormData (form1.current);
         const hoy= new Date();
         const fecha= newForm.get('fecha').split('-');
         const soloLetras=/^[a-zA-ZÀ-ÿ\s]{1,40}$/;
         const letrasNumeros=/^[A-Za-z0-9\s]+$/;
-        const correcto= validarDatos(newForm, soloLetras, letrasNumeros, setState)
+        const correcto= validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
         if (correcto){
-            definirPaquete(newForm, hoy, fecha, setState, setPrecio)
+            definirPaquete(newForm, hoy, fecha, setState, setPrecio);
         }
     }
-    const registrarDatos=(newForm, state)=>{
+    const registrarDatos=(state)=>{
+        const newForm = new FormData (form1.current)
         const cliente={
             nombre:newForm.get('nombre'),
             telefono:newForm.get('telefono'),
@@ -30,7 +30,7 @@ function Formulario() {
             evento:newForm.get('evento'),
             paquete:`paquete ${newForm.get('tipo')}`
         }
-        if (state==''){
+        if (document.getElementById('estado').value==undefined){
             Clientes[Clientes.length]=cliente;
             alert(JSON.stringify(Clientes));
         }
@@ -70,7 +70,7 @@ function Formulario() {
                                             <option value="4">Paquete 4</option>
                                         </select>
                                     </div>
-                                    <label className="alert">{state}</label><br/>
+                                    <label className="alert" id="estado">{state}</label><br/>
                                     <button type="button" onClick={registrarDatos} className="btn">Reservar</button>
                                 </center>
                             </form>

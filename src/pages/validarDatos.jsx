@@ -1,12 +1,12 @@
-function validarDatos(newForm, soloLetras, letrasNumeros, setState){
-    if (newForm.get('nombre')==''){
-        setState('El campo "Nombre Completo" no puede estar vacio');
+function validarDatos(nombre, newForm, soloLetras, letrasNumeros, setState){
+    if (nombre==''){
+        document.getElementById('estado').innerHTML='El campo "Nombre Completo" no puede estar vacio'
         return false;
     }else if(newForm.get('nombre').search(soloLetras)){
-        setState('El campo "Nombre Completo" solo puede llevar letras')
+        document.getElementById('estado').innerHTML='El campo "Nombre Completo" solo puede llevar letras'
         return false;
     }else if (newForm.get('telefono')==''){
-        setState('El campo "Número Telefónico" no puede estar vacio')
+        document.getElementById('estado').innerHTML='El campo "Número Telefónico" no puede estar vacio'
         return false;
     }else if (newForm.get('telefono').length<10||newForm.get('telefono').length>10){
         setState('El "Número Telefónico" tiene que tener 10 numeros');
