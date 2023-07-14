@@ -1,0 +1,9 @@
+.tableR{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+th{
+    border: 2px solid gray;
+    padding: 0;
+}

@@ -1,7 +1,7 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
-import validarDatos from "./validarDatos";
-import definirPaquete from "./definirPaquete";
+import validarDatos from "./validar/validarDatos";
+import definirPaquete from "./validar/definirPaquete";
 import Clientes from "../components/contenedor/Clientes";
 import "../assets/styles/Formulario.css";
 

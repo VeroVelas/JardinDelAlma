@@ -1,7 +1,21 @@
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/styles/InicioSesion.css";
 import Navbar from "../components/moleculas/Navbar";
 
 function InicioSesion() {
+    const form=useRef();
+    const [state, setState]=useState()
+    const navigate=useNavigate()
+    const iniciar=()=>{
+        const newForm=new FormData(form.current)
+        if (newForm.get('Nombre')!='Jesus'){
+            setState('Nombre incorrecto')
+        }else if(newForm.get('contra')!='1234'){
+            setState('Contraseña incorrecta')
+        }else
+            navigate('/datos')
+    }
     return ( 
         <>
         <Navbar/>
@@ -20,22 +34,15 @@ function InicioSesion() {
                             <div class="card">
                                 <div class="card-body py-5 px-md-5">
                                     <center><h1>Iniciar Ya!</h1></center><br/>
-                                    <form>
+                                    <form ref={form}>
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="" placeholder="Nombre Completo" class="form-control text-center p-2"/>
-                                        </div> 
-                                        <div class="form-outline mb-4">
-                                            <input type="number" id="" placeholder="Número Telefónico" class="form-control text-center p-2" />
+                                            <input type="text" name="Nombre" placeholder="Nombre Completo" class="form-control text-center p-2"/>
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="" placeholder="Contraseña" class="form-control text-center p-2" />
+                                            <input type="password" name="contra" placeholder="Contraseña" class="form-control text-center p-2" />
                                         </div>
-                                        <div class="form-outline mb-4">
-                                            <input type="password" id="" placeholder="Confirmación De Contraseña" class="form-control text-center p-2" />
-                                        </div>
-                                        <center><button type="submit" class="btn btn-block mb-4">
-                                        Iniciar!
-                                        </button></center>
+                                        <label>{state}</label>
+                                        <center><button type="button" onClick={iniciar} class="btn btn-block mb-4">Iniciar</button></center>
                                     </form>
                                 </div>
                             </div>
