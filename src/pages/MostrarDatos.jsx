@@ -23,15 +23,16 @@ function MostrarDatos() {
 
     return (
         <>
-            <Navbar/>
+            <Navbar/><br/><br/>
             <Title2>Reservaciones</Title2>
-            <button type="button" onClick={obtenerCliente}>mostrar</button>
-            <div className="tableR">
-                <table>
+            <br/><br/><br/><br/>
+            <div>
+                <table className="table table-striped">
                     <thead>
                         <tr>
+                            <th><center><button className="botonMostrar btn btn-success" type="button" onClick={obtenerCliente}>Mostrar</button></center></th>
                             <th><h3>Nombre</h3></th>
-                            <th><h3>Telefono</h3></th>
+                            <th><h3>Teléfono</h3></th>
                             <th><h3>Invitados</h3></th>
                             <th><h3>Fecha</h3></th>
                             <th><h3>Evento</h3></th>
