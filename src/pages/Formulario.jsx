@@ -17,7 +17,6 @@ function Formulario() {
         const hoy= new Date();
         const fecha= newForm.get('fecha').split('-');
         correcto= validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
-        alert(correcto)
         if (correcto){
             definirPaquete(newForm, hoy, fecha, setState, setPrecio);
         }
