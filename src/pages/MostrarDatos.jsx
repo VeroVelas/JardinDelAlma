@@ -1,25 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Clientes from '../components/contenedor/Clientes';
+import Data from "../components/atoms/Data";
 import Navbar from "../components/moleculas/Navbar";
 import Title2 from "../components/atoms/Title2";
-import Clientes from '../components/contenedor/Clientes';
 import '../assets/styles/MostrarDatos.css';
 
 function MostrarDatos() {
     const [datos, setDatos] = useState([]);
     
-    const obtenerCliente = () => {
-        const clientesHTML = Clientes.map((cliente, index) => (
-            <tr key={index}>
-                <th>{cliente.nombre}</th>
-                <th>{cliente.telefono}</th>
-                <th>{cliente.invitados}</th>
-                <th>{cliente.fecha}</th>
-                <th>{cliente.evento}</th>
-                <th>{cliente.paquete}</th>
-            </tr>
-        ));
-        setDatos(clientesHTML);
-    }
+    useEffect(() => {
+        setDatos(Clientes);
+    },[])
 
     return (
         <>
@@ -30,7 +21,6 @@ function MostrarDatos() {
                 <table className="table table-striped">
                     <thead>
                         <tr>
-                            <th><center><button className="botonMostrar btn btn-success" type="button" onClick={obtenerCliente}>Mostrar</button></center></th>
                             <th><h3>Nombre</h3></th>
                             <th><h3>Teléfono</h3></th>
                             <th><h3>Invitados</h3></th>
@@ -40,7 +30,20 @@ function MostrarDatos() {
                         </tr>
                     </thead>
                     <tbody>
-                        {datos}
+                        {
+                            datos.map((cliente)=>(
+                                <>
+                                    <Data
+                                        nombre={cliente.nombre}
+                                        invitados={cliente.invitados}
+                                        telefono={cliente.telefono}
+                                        fecha={cliente.fecha}
+                                        evento={cliente.evento}
+                                        paquete={cliente.paquete}
+                                    />
+                                </>
+                            ))
+                        }
                     </tbody>
                 </table>
             </div>

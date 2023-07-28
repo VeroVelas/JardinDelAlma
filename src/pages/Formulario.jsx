@@ -6,21 +6,23 @@ import Clientes from "../components/contenedor/Clientes";
 import "../assets/styles/Formulario.css";
 
 function Formulario() {
+    let correcto;
     const form1 = useRef();
     const [state, setState]=useState([]);
     const [precio, setPrecio]=useState([]);
+    const soloLetras=/^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    const letrasNumeros=/^[A-Za-z0-9\s]+$/;
     const chandlerClick = () => {
         const newForm = new FormData (form1.current);
         const hoy= new Date();
         const fecha= newForm.get('fecha').split('-');
-        const soloLetras=/^[a-zA-ZÀ-ÿ\s]{1,40}$/;
-        const letrasNumeros=/^[A-Za-z0-9\s]+$/;
-        const correcto= validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
+        correcto= validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
+        alert(correcto)
         if (correcto){
             definirPaquete(newForm, hoy, fecha, setState, setPrecio);
         }
     }
-    const registrarDatos=(state)=>{
+    const registrarDatos=()=>{
         const newForm = new FormData (form1.current)
         const cliente={
             nombre:newForm.get('nombre'),
@@ -30,9 +32,15 @@ function Formulario() {
             evento:newForm.get('evento'),
             paquete:`paquete ${newForm.get('tipo')}`
         }
-        if (document.getElementById('estado').value==undefined){
-            Clientes[Clientes.length]=cliente;
-            alert(JSON.stringify(Clientes));
+        correcto=validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
+        if (correcto){
+            setState('')
+            try {
+                Clientes[Clientes.length]=cliente;
+                setState('guardado')
+            } catch (error) {
+                setState(error)
+            }
         }
     }
 

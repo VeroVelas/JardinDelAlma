@@ -1,2 +1,2 @@
-const Clientes = new Array()
-export default Clientes
+const Clientes = []
+export default Clientes;
