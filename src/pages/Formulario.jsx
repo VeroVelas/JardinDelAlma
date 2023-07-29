@@ -70,11 +70,9 @@ function Formulario() {
                                         <input type="text" onChange={chandlerClick} name="evento" placeholder="Tipo De Evento" className="inputFormulario "/>
                                     </div>
                                     <div className="">
-                                        <select className="tipoOperación" onChange={chandlerClick} name="tipo">
-                                            <option value="1">Paquete 1</option>
-                                            <option value="2">Paquete 2</option>
-                                            <option value="3">Paquete 3</option>
-                                            <option value="4">Paquete 4</option>
+                                        <select className="tipoOperación inputFormulario" onChange={chandlerClick} name="tipo">
+                                            <option value="1">Paquete Salón Inmobiliario</option>
+                                            <option value="4">Paquete Full Service</option>
                                         </select>
                                     </div>
                                     <label className="alert" id="estado">{state}</label><br/>

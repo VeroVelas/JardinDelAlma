@@ -48,12 +48,15 @@
 
 }
 .inputFormulario{
-    margin-top: 4%;
-    margin-bottom: 4%;
-    background: #D9D9D9;
+    margin-top: 3%;
+    margin-bottom: 3%;
     border: none;
     width: 80%;
-    height: 4.5vh;
+    height: 8.5vh;
+    border-radius: 30px;
+    background: #F1F1F1;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.20);
+    text-align: center;
 }
 .FondoVerde{
     padding-top: 7%;
