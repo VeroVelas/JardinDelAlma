@@ -12,7 +12,7 @@ function Section2() {
             <div className="container aos-init aos-animate" data-aos="fade-up">
                 <div className="row gx-0">
                     <div className="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
-                        <img src={ImgSection2} className="img-fluid" alt=""/>
+                        <img src={ImgSection2} className="img-fluid imagencitaSec2" alt=""/>
                     </div>
                     <div className="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                     <div className="containerText">

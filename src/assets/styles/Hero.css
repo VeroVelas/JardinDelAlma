@@ -12,6 +12,7 @@
     margin-bottom: 3rem;
 }
 .heroSection{
+    
     background-image: url(../img/heroImagen.png);
     background-size: cover;
     min-height: 100vh;

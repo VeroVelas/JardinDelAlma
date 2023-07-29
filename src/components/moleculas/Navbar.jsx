@@ -23,6 +23,9 @@ function Navbar() {
                         <a className="nav-link active" aria-current="page" href="#contacto">Contacto</a>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link active" aria-current="page" to='/'>Invitaciones Digitales</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to='/iniciosesion'>Iniciar</Link>
                     </li>
                 </ul>

@@ -1,6 +1,12 @@
 .contenedorTextoSection1{
     background-color: rgba(142, 181, 142, 0.7);
     padding: 3%;
+    
+}
+.contenedorTextoSection1:hover{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    overflow:hidden;
+    transition:all 2.0s;
 }
 .TituloSection2{
     color: #FFF;
@@ -31,3 +37,8 @@
     text-align: justify;
 
 }
+.imagencitaSec1:hover{
+    transition:all 2.0s;
+    filter: opacity(.4);
+}
+

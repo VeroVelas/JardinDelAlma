@@ -5,3 +5,13 @@
     margin-top: 10%;
     margin-bottom: 1%;
 }
+.coverImagen:hover{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    overflow:hidden;
+    transition:all 2.0s;
+}
+.imagenesCollagecito:hover{
+    -webkit-transform:scale(1.1);transform:scale(1.1);
+    overflow:hidden;
+    transition:all 2.0s;
+}

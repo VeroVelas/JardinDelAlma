@@ -1,5 +1,5 @@
 function validarDatos(nombre, newForm, soloLetras, letrasNumeros, setState){
-    const correcto=true;
+    let correcto=true;
     if (nombre==''){
         setState('El campo "Nombre Completo" no puede estar vacio')
         correcto=false;

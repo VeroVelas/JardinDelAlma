@@ -16,7 +16,7 @@ function Section1() {
                         </div>
                     </div>
                     <div className="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
-                        <img src={imagenSectio1} className="img-fluid" alt=""/>
+                        <img src={imagenSectio1} className="img-fluid imagencitaSec1" alt=""/>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@ function Section1() {
             <div className="container aos-init aos-animate" data-aos="fade-up">
                 <div className="row gx-0">
                     <div className="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
-                        <img src={imagenSectio11} className="img-fluid" alt=""/>
+                        <img src={imagenSectio11} className="img-fluid imagencitaSec1" alt=""/>
                     </div>
                     <div className="col-lg-6 d-flex flex-column justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
                         <div className="contenedorTextoSection1 content">

@@ -13,7 +13,7 @@ function Collage() {
     <img src={imgCollageGrande} loading="lazy" className="coverImagen"/>
     <div class="lightbox">
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-6 imagenesCollagecito">
       <img
         src={img1c}
         loading="lazy"
@@ -25,7 +25,7 @@ function Collage() {
         class="w-100 shadow-1-strong rounded"
       />
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 imagenesCollagecito">
       <img
         src={img3c}
         loading="lazy"
@@ -37,14 +37,14 @@ function Collage() {
         class="w-100 shadow-1-strong rounded"
       />
     </div>
-    <div class="col-lg-6 p-3">
+    <div class="col-lg-6 imagenesCollagecito p-3">
       <img
         src={img7c}
         loading="lazy"
         class="w-100 shadow-1-strong rounded"
       />
     </div>
-    <div class="col-lg-6 p-3">
+    <div class="col-lg-6 imagenesCollagecito p-3">
     <img
         src={img5c}
         loading="lazy"
