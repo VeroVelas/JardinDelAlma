@@ -90,8 +90,8 @@ function Formulario() {
                     <div class="CajaInformacion card-body">
                         <h5 class="tituloNegritas card-title text-center">Nota</h5>
                         <p class="textoJustificado card-text">
-                            El paquete por persona mínimo deben albergar 60 personas.
-                            Al igual que el precio será un estimado en invitados, para ello ponerse en contacto en el dueño.
+                            El paquete "Full Service" mínimo deben albergar 60 personas.
+                            Al igual que el precio será un estimado en invitados, para ello ponerse en contacto al 961 178 4166.
                         </p>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ function Formulario() {
                 <div class="card">
                     <div class="CajaInformacion card-body">
                         <h5 class="tituloNegritas card-title text-center">Nota</h5>
-                        <p class="textoJustificado card-text text-justify">En el paquete 1,2 y 3 cada invitado tiene un costo de $315, ya que se verá reflejado el precio estimado en cuantos invitados aproximados designe en su paquete + el precio base del salón (Paquete de su elección).</p>
+                        <p class="textoJustificado card-text text-justify">En el paquete "Salón Inmobiliario" cada invitado tiene un costo de $315, ya que se verá reflejado el precio estimado en cuantos invitados aproximados designe en su paquete + el precio base del salón (Paquete Salón Inmobiliario).</p>
                     </div>
                 </div>
             </div>

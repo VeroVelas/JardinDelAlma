@@ -3,11 +3,11 @@ import calcularPrecio from "./calcularPrecio";
 function ultimaValidacion(newForm, hoy, fecha, setState, setPrecio){
     let correcto = true
     if (newForm.get('invitados')<=49){
-        setState('Si el numero de invitados es menor de 50 ponerse en contacto 961 178 4166')
+        setState('Si el número de invitados es menor de 50 ponerse en contacto al 961 178 4166')
         setPrecio('')
         correcto=false;
     }else if(newForm.get('invitados')>=121){
-        setState('Si el numero de invitados es mas de 120 ponerse en contacto 961 178 4166')
+        setState('Si el número de invitados es más de 120 ponerse en contacto al 961 178 4166')
         setPrecio('')
         correcto=false;
     }else if (fecha[0]<=hoy.getFullYear()){
