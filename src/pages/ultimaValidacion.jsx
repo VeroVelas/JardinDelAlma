@@ -1,14 +1,21 @@
 import calcularPrecio from "./calcularPrecio";
 
-function ultimaValidacion(newForm, minimo, maximo, hoy, fecha, setState, setPrecio){
-    if (newForm.get('invitados')<minimo||newForm.get('invitados')>maximo){
-        setState('El numero de invitados tiene que estar en el rango de 30 a 120 personas')
+function ultimaValidacion(newForm, hoy, fecha, setState, setPrecio){
+    let correcto = true
+    if (newForm.get('invitados')<=49){
+        setState('Si el numero de invitados es menor de 50 ponerse en contacto 961 178 4166')
         setPrecio('')
+        correcto=false;
+    }else if(newForm.get('invitados')>=121){
+        setState('Si el numero de invitados es mas de 120 ponerse en contacto 961 178 4166')
+        setPrecio('')
+        correcto=false;
     }else if (fecha[0]<=hoy.getFullYear()){
         if (fecha[1]<=hoy.getMonth()+1){
             if (fecha[2]<=hoy.getDate()){
                 setState('La fecha del evento no es valida');
                 setPrecio('')
+                correcto=false;
             }else {
                 setState('')
                 setPrecio(calcularPrecio(newForm.get('invitados'), newForm.get('tipo')))
@@ -21,5 +28,6 @@ function ultimaValidacion(newForm, minimo, maximo, hoy, fecha, setState, setPrec
         setState('')
         setPrecio(calcularPrecio(newForm.get('invitados'), newForm.get('tipo')))
     }
+    return correcto
 }
 export default ultimaValidacion;

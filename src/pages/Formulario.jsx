@@ -1,7 +1,7 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
 import validarDatos from "./validarDatos";
-import definirPaquete from "./definirPaquete";
+import ultimaValidacion from "./ultimaValidacion";
 import Clientes from "../components/contenedor/Clientes";
 import "../assets/styles/Formulario.css";
 
@@ -12,17 +12,18 @@ function Formulario() {
     const [precio, setPrecio]=useState([]);
     const soloLetras=/^[a-zA-ZÀ-ÿ\s]{1,40}$/;
     const letrasNumeros=/^[A-Za-z0-9\s]+$/;
+    const hoy= new Date();
     const chandlerClick = () => {
         const newForm = new FormData (form1.current);
-        const hoy= new Date();
         const fecha= newForm.get('fecha').split('-');
         correcto= validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
         if (correcto){
-            definirPaquete(newForm, hoy, fecha, setState, setPrecio);
+            correcto=ultimaValidacion(newForm, hoy, fecha, setState, setPrecio)
         }
     }
     const registrarDatos=()=>{
         const newForm = new FormData (form1.current)
+        const fecha= newForm.get('fecha').split('-');
         const cliente={
             nombre:newForm.get('nombre'),
             telefono:newForm.get('telefono'),
@@ -31,14 +32,15 @@ function Formulario() {
             evento:newForm.get('evento'),
             paquete:`paquete ${newForm.get('tipo')}`
         }
-        correcto=validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState);
-        if (correcto){
-            setState('')
-            try {
-                Clientes[Clientes.length]=cliente;
-                setState('guardado')
-            } catch (error) {
-                setState(error)
+        if (validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState)){
+            if (ultimaValidacion(newForm,hoy,fecha,setState,setPrecio)){
+                setState('')
+                try {
+                    Clientes[Clientes.length]=cliente;
+                    setState('guardado')
+                } catch (error) {
+                    setState(error)
+                }
             }
         }
     }
@@ -72,7 +74,7 @@ function Formulario() {
                                     <div className="">
                                         <select className="tipoOperación inputFormulario" onChange={chandlerClick} name="tipo">
                                             <option value="1">Paquete Salón Inmobiliario</option>
-                                            <option value="4">Paquete Full Service</option>
+                                            <option value="2">Paquete Full Service</option>
                                         </select>
                                     </div>
                                     <label className="alert" id="estado">{state}</label><br/>
