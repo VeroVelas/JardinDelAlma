@@ -43,6 +43,9 @@ function MostrarDatos() {
                                 <th><h3>Fecha</h3></th>
                                 <th><h3>Evento</h3></th>
                                 <th><h3>Paquete</h3></th>
+                                <th><div className="posisionBtn">
+                    <button  onClick={generatePDF}>PDF</button>
+                    </div></th>
                             </tr><br/>
                         </thead>
                         <tbody>
@@ -61,10 +64,7 @@ function MostrarDatos() {
                                 ))
                             }
                         </tbody>
-                    </table>
-                    <div className="posisionBtn">
-                    <button  onClick={generatePDF}>PDF</button>
-                    </div>
+                    </table><br/>
                 </div>
             </div>
         </>
