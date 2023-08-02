@@ -39,7 +39,7 @@ function MostrarDatos() {
         onAfterPrint:() => Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'PDF Guardado',
+            title: 'Acción realizada correctamente.',
             showConfirmButton: false,
             timer: 1500
           })
