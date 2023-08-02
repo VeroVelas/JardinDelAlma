@@ -5,6 +5,7 @@ import Data from "../components/atoms/Data";
 import Navbar from "../components/moleculas/Navbar";
 import Title2 from "../components/atoms/Title2";
 import Swal from 'sweetalert2'
+import axios from "axios";
 import '../assets/styles/MostrarDatos.css';
 
 
@@ -13,7 +14,23 @@ function MostrarDatos() {
     const [datos, setDatos] = useState([]);
     
     useEffect(() => {
-        setDatos(Clientes);
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:3000/cliente/getAll',
+            headers: { 
+                'Content-Type': 'application/json', 
+                'Accept': 'application/json'
+            },
+        };
+        axios.request(config)
+        .then(reponse=>{
+            console.log(reponse.data)
+            setDatos(reponse.data)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
     },[])
 
     const generatePDF = useReactToPrint({

@@ -1,8 +1,8 @@
 import Navbar from "../components/moleculas/Navbar";
 import { useRef, useState } from "react";
-import validarDatos from "./validarDatos";
-import ultimaValidacion from "./ultimaValidacion";
-import Clientes from "../components/contenedor/Clientes";
+import validarDatos from "./validacionesYPrecios/validarDatos";
+import ultimaValidacion from "./validacionesYPrecios/ultimaValidacion";
+import axios from "axios";
 import "../assets/styles/Formulario.css";
 
 function Formulario() {
@@ -34,10 +34,23 @@ function Formulario() {
         }
         if (validarDatos(newForm.get('nombre'),newForm, soloLetras, letrasNumeros, setState)){
             if (ultimaValidacion(newForm,hoy,fecha,setState,setPrecio)){
-                setState('')
                 try {
-                    Clientes[Clientes.length]=cliente;
-                    setState('guardado')
+                    setState('')
+                    const config={
+                        method: 'post',
+                        url: 'http://localhost:3000/cliente/crear',
+                        headers: { 
+                            'Content-Type': 'application/json', 
+                            'Accept': 'application/json'
+                        },
+                        data : cliente
+                    }
+                    axios.request(config)
+                    .then(response=>{
+                        console.log(JSON.stringify(response.data))
+                        setState('guardado')
+                    })
+                    .catch((error) => {console.log(error)});
                 } catch (error) {
                     setState(error)
                 }
