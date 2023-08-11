@@ -1,5 +1,6 @@
 import imagenSectio1 from "../../assets/img/imagenSection1.png"
 import imagenSectio11 from "../../assets/img/imagenSection11.png"
+import slider from "../../assets/img/SlideUp.svg"
 import "../../assets/styles/Section1.css"
 
 function Section1() {
@@ -35,6 +36,11 @@ function Section1() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="sliderUp">
+                <a href="#">
+                    <img src={slider}></img>
+                </a>
             </div>
         </section>
         </>
